@@ -1,0 +1,142 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc; /* Light beige background */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Card Styling (Pet Profiles) */
+.card {
+    width: 350px;
+    border: 2px solid black;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 20px;
+    background-color: white; /* Profile background */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: inline-flex;
+    background-size: auto;
+
+}
+
+
+.card:hover {
+    box-shadow: 8px 8px 50px black;
+}
+
+/* Image Styling */
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Headings */
+h2 {
+    color: chocolate;
+}
+
+h1 {
+    color: darkred;
+}
+
+span:hover {
+    color: brown;
+    transform: scale(1.5);
+}
+
+h4 {
+    text-align: right;
+    color: blueviolet;
+}
+
+/* Pet Container (Aligning Profiles Horizontally) */
+#pets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+
+/* Search & Filter Section */
+.filter-container {
+    margin: 20px;
+    padding: 15px;
+    background-color: #d3a35e; /* Warm yellow background */
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.filter-container select, 
+.filter-container button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.filter-container select:hover, 
+.filter-container button:hover {
+    background-color: lightgray;
+}
+
+/* Adoption Form */
+form {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #d3a35e; /* Matching the filter section */
+    border-radius: 10px;
+    display: inline-block;
+}
+
+input, select, button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+button {
+    background-color: chocolate;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: brown;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #pets {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .filter-container, form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 375px) {
+    #pets {
+        flex-wrap: wrap;
+    }
+}

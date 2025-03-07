@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdoptMe.com</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h2><i>adoptme.com</i></h2>
+    <h1>Adopt a <span>Pet</span> Today</h1>
+    <br /><br />
+
+    <!-- Search & Filter Section -->
+    <div class="filter-container">
+        <select id="petType">
+            <option value="">All Types</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="panda">Panda</option>
+        </select>
+
+        <select id="petAge">
+            <option value="">All Ages</option>
+            <option value="puppy">Puppy/Kitten</option>
+            <option value="adult">Adult</option>
+            <option value="senior">Senior</option>
+        </select>
+
+        <select id="petLocation">
+            <option value="">All Locations</option>
+            <option value="new-york">New York</option>
+            <option value="los-angeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+        </select>
+
+        <button onclick="filterPets()">🔍 Search</button>
+    </div>
+
+    <!-- Pet Listing -->
+    <div id="petsContainer" class="pets-container">
+        <div class="card" data-type="dog" data-age="puppy" data-location="new-york">
+            <img src="doggy.jpeg" alt="jerry" />
+            <h3>Meet Jerry</h3> 
+            <p>
+                Jerry is a charming and friendly dog with a heart of gold. He is looking for a loving home to call his own.
+                If you are looking for a loyal and loving companion, Jerry may be the perfect pet for you!
+            </p>
+        </div>
+
+        <div class="card" data-type="cat" data-age="adult" data-location="los-angeles">
+            <img src="cat.jpeg" alt="tom" />
+            <h3>Meet Tom</h3>
+            <p>
+                Tom is a handsome and affectionate cat looking for his forever home. He is a sleek domestic shorthair with 
+                striking green eyes that will capture your heart.
+            </p>
+        </div>
+
+        <div class="card" data-type="panda" data-age="adult" data-location="chicago">
+            <img src="panda.jpeg" alt="panda"/>
+            <h3>Meet Panda</h3>
+            <p>
+                Animated pandas are adorable and fun-loving. They are symbols of courage, resilience, and innocence, making them 
+                relatable and endearing to everyone.
+            </p>
+        </div>
+    </div>
+
+    <!-- Adoption Form -->
+    <h2>🏡 Apply for Adoption</h2>
+    <form id="adoptionForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="petName" placeholder="Pet Name" required>
+        <button type="submit">Apply</button>
+    </form>
+
+    <h4>a gift of new life</h4>
+
+    <script src="script.js"></script>
+</body>
+</html>
